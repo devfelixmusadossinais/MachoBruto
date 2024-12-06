@@ -200,6 +200,20 @@ src="https://www.facebook.com/tr?id=3804535359803605&ev=PageView&noscript=1"
             <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
         </div>
     </footer>
+    <script>
+        // Script para exibir a data dinâmica
+        window.onload = function() {
+            var today = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = today.toLocaleDateString('pt-BR', options);
+            document.getElementById('video-date').textContent = 'Assista até o final, essa apresentação sairá do ar no dia ' + formattedDate;
+        };
+        
+        // Script para mostrar o botão de CTA após 20 minutos (1200 segundos)
+        setTimeout(function() {
+            document.querySelector('.cta-button').style.display = 'inline-block';
+        }, 100); // 20 minutos em milissegundos -->
+    </script>
 
 
 </body>
